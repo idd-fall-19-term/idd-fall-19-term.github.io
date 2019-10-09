@@ -1,11 +1,92 @@
-body {
-	background-color: salmon;
-	text-align: center;
-font-size: 1,5em;
-font-weight: 700;
-}
-p{
-	font-size: 1.5em;
-	font-weight: 700;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Source+Sans+Pro&display=swap');
 
+body{
+	background-color:lightgray;
+	font-weight:normal
+	font-style: normal;
+	font-size:1rem;
+	font-family:helvetica,arial,sans-serif;
+
+}
+
+h1{
+	border-bottom: 0.125rem solid black;
+	font: 500 normal 2.5rem 'Roboto',helvetica,arial,sans-serif;
+
+}
+.mainmenu{
+	text-align: center;
+}
+.material-icons{
+	text-align: center;
+}
+.heading{
+	text-align: center;
+}
+html{
+  --background: #fff;
+  --on-background: #005293;
+
+}
+
+.intro{
+	background-color:  var(--on-background);
+  color: var(--background);
+  text-align: center;
+}
+
+	
+}
+.topbar{
+	--on-background: #005293;
+}
+.em{
+	font-weight: bold;
+}
+.navigation {
+
+  grid-area: menu;
+}
+.mainmenu {
+	line-height: 2;
+  padding: 0;
+	margin: 0;
+	background-color:black;
+ 
+text-align: right;
+color: #fff;;
+	
+}
+
+.mainmenu a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+  
+
+
+@media screen and (min-width: 640px) {
+
+	.intro {
+    grid-template-columns: 4em 1fr auto;
+    grid-template-areas: "logo heading menu";
+	}
+  .navigation {
+    place-self: end;
+  }
+  .mainmenu > li {
+    display: inline-block;
+  }
+  .mainmenu > li:hover {
+		background-color: darkgrey;
+		
+	}
+	
+	.mainmenu a {
+    line-height: 3;
+    padding: 0 1em;
+    display: block;
+  } 
 }
