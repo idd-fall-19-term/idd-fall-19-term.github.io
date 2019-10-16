@@ -46,16 +46,28 @@ html{
 .navigation {
 
   grid-area: menu;
+  
 }
 .mainmenu {
 	line-height: 2;
   padding: 0;
 	margin: 0;
-	background-color:black;
+  background-color:black;
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr 1fr;
+  list-style-type: none;
+
+
  
 text-align: right;
 color: #fff;;
 	
+}
+.one{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: flex-end;
+  
 }
 
 .mainmenu a {
@@ -63,6 +75,20 @@ color: #fff;;
   text-decoration: none;
 }
 
+
+
+
+.footerstyle{
+ 
+  
+  
+  background-color: black;
+  color: #aaa;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ 
+}
 
   
 
@@ -82,11 +108,40 @@ color: #fff;;
   .mainmenu > li:hover {
 		background-color: darkgrey;
 		
-	}
+  }
+  .contentstyle{
+    text-align: center;
+    font-size: 2em;
+    
 	
 	.mainmenu a {
     line-height: 3;
     padding: 0 1em;
     display: block;
   } 
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  .navigation {
+    
+    flex-direction: column;
+  }
+
+  .footerstyle{
+    position: relative;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height:200;
+    font-size: 1rem;
+  }
+
 }
